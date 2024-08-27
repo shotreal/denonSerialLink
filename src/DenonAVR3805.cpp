@@ -4,6 +4,7 @@ DenonAVR3805::DenonAVR3805(HardwareSerial& serial) : _serial(serial) {}
 
 void DenonAVR3805::sendCommand(const String& command) {
     _serial.print(command);
+    delay(100);
 }
 
 void DenonAVR3805::powerOn() {
